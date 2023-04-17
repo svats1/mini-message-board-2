@@ -1,0 +1,19 @@
+extends layout
+
+block content 
+    h1= "New Message" 
+    form(action="/new", method="post", class="new-message-form")
+        | Type your message here:
+        br
+        input(type="text", name='text', class="message-box", required, minLength=3, maxLength=400)
+        br
+        br
+        | Type your name here: 
+        br
+        input(type="text", name='user', class='username-box', required, minLength=3, maxLength=100)
+        br
+        br
+        button(type="submit") Submit
+
+    br
+    a(href="/") Home Page

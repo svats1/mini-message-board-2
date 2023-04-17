@@ -1,0 +1,9 @@
+extends layout
+
+block content
+  h1= "Mini Messageboard"
+  h3 Read messages left by our users below:
+  each entry in messages
+    p "#{entry.text}" added by "#{entry.user}" on #{new Date()}
+
+  a(href="/new") Add New Message
